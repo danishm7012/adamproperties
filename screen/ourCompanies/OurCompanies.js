@@ -2,6 +2,7 @@ import {
   Dimensions,
   FlatList,
   Image,
+  Linking,
   Text,
   TouchableOpacity,
   View,
@@ -47,7 +48,9 @@ const OurCompanies = (props) => {
       <PropertyType
         title={itemData.item.title}
         serviceLogo={itemData.item.image}
-        onSelect={() => {}}
+        onSelect={() => {
+          Linking.openURL(itemData.item.webURI)
+        }}
       />
     )
   }

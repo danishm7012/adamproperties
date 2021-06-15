@@ -71,6 +71,7 @@ const Projects = (props) => {
               routeName: 'Project_Category',
               params: {
                 serTitle: 'Project In Pakistan',
+                uaeImage: require('../../assets/projectImages/pakistanProjects/header.jpg'),
               },
             })
           }}
@@ -79,13 +80,13 @@ const Projects = (props) => {
           title='Project In UAE'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
           onSelect={() => {
-            // props.navigation.navigate({
-            // routeName: 'Property_Detail_Sale',
-            // params: {
-            //   serId: itemData.item._id,
-            //   serTitle: itemData.item.slug,
-            // },
-            // })
+            props.navigation.navigate({
+              routeName: 'Project_Category',
+              params: {
+                serTitle: 'Project in UAE',
+                uaeImage: require('../../assets/AdamPropertiesImages/projectsimages/UAEproject/UAEproject.jpg'),
+              },
+            })
           }}
         />
       </View>
@@ -98,17 +99,17 @@ const Projects = (props) => {
         }}
       >
         <PropertyTypes
-          title='Project In Turkey'
+          title='Project in TURKEY'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
-          // onSelect={() => {
-          //   props.navigation.navigate({
-          //     routeName: 'Property_Detail_Sale',
-          //     params: {
-          //       serId: itemData.item._id,
-          //       serTitle: itemData.item.slug,
-          //     },
-          //   })
-          // }}
+          onSelect={() => {
+            props.navigation.navigate({
+              routeName: 'Project_Category',
+              params: {
+                serTitle: 'Project in TURKEY',
+                uaeImage: require('../../assets/AdamPropertiesImages/projectsimages/turkeyProject/turkeyProject.jpg'),
+              },
+            })
+          }}
         />
         <PropertyTypes
           title='Gawadar Project'

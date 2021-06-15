@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
+import { Linking, ScrollView } from 'react-native'
 
 import BuyerCategoryData from './../../data/BuyerCategoryData'
 import Color from '../../constants/Colors'
@@ -16,7 +17,6 @@ import HeaderLogo from './../headerlogo/HeaderLogo'
 import { Ionicons } from '@expo/vector-icons'
 import PropertyTypes from '../../component/home/PropertyType'
 import React from 'react'
-import { ScrollView } from 'react-native'
 
 let { width: screenWidth, height: screenHeight } = Dimensions.get('window')
 
@@ -66,7 +66,9 @@ const OverSeasProperties = (props) => {
         <PropertyTypes
           title='Properties In Pakistan'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
-          // onSelect={() => {
+          // webUrl=''
+          onSelect={() => Linking.openURL('http://alhafeezproperties.com/')}
+          //={() => {
           //   props.navigation.navigate({
           //     routeName: 'Property_Detail_Sale',
           //     params: {
@@ -79,15 +81,16 @@ const OverSeasProperties = (props) => {
         <PropertyTypes
           title='Properties In Lahore'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
-          onSelect={() => {
-            // props.navigation.navigate({
-            // routeName: 'Property_Detail_Sale',
-            // params: {
-            //   serId: itemData.item._id,
-            //   serTitle: itemData.item.slug,
-            // },
-            // })
-          }}
+          onSelect={() => Linking.openURL('http://alhafeezproperties.com/')}
+          // onSelect={() => {
+          // props.navigation.navigate({
+          // routeName: 'Property_Detail_Sale',
+          // params: {
+          //   serId: itemData.item._id,
+          //   serTitle: itemData.item.slug,
+          // },
+          // })
+          //}}
         />
       </View>
       <View
@@ -101,6 +104,7 @@ const OverSeasProperties = (props) => {
         <PropertyTypes
           title='CPEC Investment'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          onSelect={() => Linking.openURL('https://cpecinvestments.co.uk/')}
           // onSelect={() => {
           //   props.navigation.navigate({
           //     routeName: 'Property_Detail_Sale',
@@ -114,15 +118,16 @@ const OverSeasProperties = (props) => {
         <PropertyTypes
           title='Gawadar Project'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
-          onSelect={() => {
-            // props.navigation.navigate({
-            // routeName: 'Property_Detail_Sale',
-            // params: {
-            //   serId: itemData.item._id,
-            //   serTitle: itemData.item.slug,
-            // },
-            // })
-          }}
+          onSelect={() => Linking.openURL('https://binqasimcity.org/')}
+          // onSelect={() => {
+          // props.navigation.navigate({
+          // routeName: 'Property_Detail_Sale',
+          // params: {
+          //   serId: itemData.item._id,
+          //   serTitle: itemData.item.slug,
+          // },
+          // })
+          // }}
         />
       </View>
       <View
@@ -136,6 +141,7 @@ const OverSeasProperties = (props) => {
         <PropertyTypes
           title='Properties In Dubai'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          onSelect={() => Linking.openURL('https://almanzal.ae/')}
           // onSelect={() => {
           //   props.navigation.navigate({
           //     routeName: 'Property_Detail_Sale',
@@ -149,15 +155,16 @@ const OverSeasProperties = (props) => {
         <PropertyTypes
           title='Properties In UAE'
           serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
-          onSelect={() => {
-            // props.navigation.navigate({
-            // routeName: 'Property_Detail_Sale',
-            // params: {
-            //   serId: itemData.item._id,
-            //   serTitle: itemData.item.slug,
-            // },
-            // })
-          }}
+          onSelect={() => Linking.openURL('https://trusticon.ae/')}
+          // onSelect={() => {
+          // props.navigation.navigate({
+          // routeName: 'Property_Detail_Sale',
+          // params: {
+          //   serId: itemData.item._id,
+          //   serTitle: itemData.item.slug,
+          // },
+          // })
+          // }}
         />
       </View>
     </ScrollView>

@@ -13,12 +13,19 @@ import HeaderButton from '../../component/headerbutton/HeaderButton'
 import HeaderLogo from '../headerlogo/HeaderLogo'
 import { ImageBackground } from 'react-native'
 import PakistanProjectData from '../../data/PakistanProjectData'
+import ProjectDetailData from '../../data/ProjectDetail'
 import ProjectType from '../../component/project/ProjectType'
 import React from 'react'
 
 let { width: screenWidth, height: screenHeight } = Dimensions.get('window')
 
 const ProjectCategory = (props) => {
+  const sertitle = props.navigation.getParam('serTitle')
+  const uaeImage = props.navigation.getParam('uaeImage')
+  const displayedSubCompanies = ProjectDetailData.filter(
+    (project) => project.category === sertitle
+  )
+
   const listSection = () => {
     return (
       <View
@@ -26,10 +33,12 @@ const ProjectCategory = (props) => {
           width: screenWidth,
           height: screenHeight / 3,
           backgroundColor: Color.primaryColor,
+          marginBottom: 40,
         }}
       >
         <ImageBackground
-          source={require('../../assets/projectImages/pakistanProjects/header.jpg')}
+          source={uaeImage}
+          resizeMode='stretch'
           style={{
             width: screenWidth,
             height: screenHeight / 3,
@@ -47,7 +56,7 @@ const ProjectCategory = (props) => {
             }}
           />
           <Text style={{ fontSize: 24, color: '#fff', textAlign: 'center' }}>
-            Some Of The Best Real Estate Projects In Pakistan
+            Some Of The Best Real Estate {sertitle}
           </Text>
         </ImageBackground>
       </View>
@@ -56,21 +65,28 @@ const ProjectCategory = (props) => {
   const renderItem = (itemData) => {
     return (
       <ProjectType
-        title={itemData.item.title}
+        title={itemData.item.name}
         serviceLogo={itemData.item.image}
-        onSelect={() => {}}
+        onSelect={() => {
+          props.navigation.navigate({
+            routeName: 'Project_Detail',
+            params: {
+              proId: itemData.item.id,
+            },
+          })
+        }}
       />
     )
   }
   return (
     <View style={{ flex: 1 }}>
       <FlatList
-        data={PakistanProjectData}
+        data={displayedSubCompanies}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         ListHeaderComponent={listSection}
         showsVerticalScrollIndicator={false}
-        numColumns={2}
+        numColumns={1}
       />
     </View>
   )
