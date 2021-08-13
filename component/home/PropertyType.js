@@ -44,7 +44,14 @@ const PropertyType = ({ serviceLogo, onSelect, title }) => {
           alignItems: 'center',
         }}
       >
-        <Card style={{ flex: 0.7, minWidth: '100%' }}>
+        <Card
+          style={{
+            flex: 0.7,
+            minWidth: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
           <Card.Content>
             <Image
               source={serviceLogo}

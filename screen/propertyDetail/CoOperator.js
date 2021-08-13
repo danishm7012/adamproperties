@@ -65,7 +65,7 @@ const CoOperator = (props) => {
       >
         <PropertyTypes
           title='FACTORY'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Factory_Logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
@@ -84,7 +84,7 @@ const CoOperator = (props) => {
         />
         <PropertyTypes
           title='PETROLPUMP'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Petrolum_logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
@@ -112,7 +112,7 @@ const CoOperator = (props) => {
       >
         <PropertyTypes
           title='WAREHOUSE'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Wear_House_logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
@@ -131,7 +131,7 @@ const CoOperator = (props) => {
         />
         <PropertyTypes
           title='HOSPITAL'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Hospital-Png.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',

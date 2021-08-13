@@ -65,9 +65,9 @@ const PropertyDetailRent = (props) => {
       >
         <PropertyTypes
           title='Residential'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Wear_House_logo.jpg')}
           title='Residential'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Wear_House_logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
@@ -86,7 +86,7 @@ const PropertyDetailRent = (props) => {
         />
         <PropertyTypes
           title='Commercial'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Commerical_logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Detail_Sale',

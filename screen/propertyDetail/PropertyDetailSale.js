@@ -65,7 +65,7 @@ const PropertyDetailSale = (props) => {
       >
         <PropertyTypes
           title='Residential'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Wear_House_logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
@@ -84,7 +84,7 @@ const PropertyDetailSale = (props) => {
         />
         <PropertyTypes
           title='COMMERCIAL'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Commerical_logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
@@ -112,7 +112,7 @@ const PropertyDetailSale = (props) => {
       >
         <PropertyTypes
           title='CO-Operator'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/commercial.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Commerical_logo-2-.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Co_Operator',
@@ -125,7 +125,7 @@ const PropertyDetailSale = (props) => {
         />
         <PropertyTypes
           title='Agriculture'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/sale.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Sell___1.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
@@ -153,7 +153,7 @@ const PropertyDetailSale = (props) => {
       >
         <PropertyTypes
           title='Development'
-          serviceLogo={require('../../assets/AdamPropertiesImages/logos/rent.png')}
+          serviceLogo={require('../../assets/AdamPropertiesImages/logos/Development_Logo.jpg')}
           onSelect={() => {
             props.navigation.navigate({
               routeName: 'Property_Form',
